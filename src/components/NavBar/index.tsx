@@ -19,6 +19,12 @@ export function NavBar() {
     setIsCollapsed(state  => !state)
   }
 
+  const navItems = paths.map(path => (
+    <NavItem key={path[0]} href={path[1]}>
+      {path[0]}
+    </NavItem>
+  ))
+
   return (
     <div className="sticky top-0">
       <header className="flex justify-center bg-container-900 px-8 py-3 z-10 relative">
@@ -27,12 +33,7 @@ export function NavBar() {
         </button>
 
         <nav className="hidden md:flex">
-          <NavItem href="/">
-            Home
-          </NavItem>
-          <NavItem href="/projects">
-            Projetos
-          </NavItem>
+          {navItems}
         </nav>
 
         <Link href='/' className='absolute left-14 top-1/2 -translate-y-1/2'>
@@ -41,12 +42,7 @@ export function NavBar() {
       </header>
 
       <nav data-collapsed={isCollapsed} className="flex flex-col items-stretch bg-container-800 absolute w-full transition-all duration-[400ms] ease-out data-[collapsed=true]:-translate-y-full md:hidden">
-        <NavItem href="/">
-          Home
-        </NavItem>
-        <NavItem href="/projects">
-          Projetos
-        </NavItem>
+        {navItems}
       </nav>
     </div>
   )
