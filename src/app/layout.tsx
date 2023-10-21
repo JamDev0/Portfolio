@@ -34,6 +34,8 @@ export const metadata: Metadata = {
   description: "Juan Garcia's portfolio",
 }
 
+const fonts = `${inter.variable} ${crimsonText.variable} ${rubikMonoOne.variable} ${chakraPetch.variable}`
+
 export default function RootLayout({
   children,
 }: {
@@ -41,7 +43,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${crimsonText.variable} ${rubikMonoOne.variable} ${chakraPetch.variable}`}>{children}</body>
+      <body className={`${fonts}`}>
+        {children}
+      </body>
     </html>
   )
 }
