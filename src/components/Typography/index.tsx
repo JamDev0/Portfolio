@@ -31,6 +31,7 @@ const typography = cva('', {
       'body-2': 'font-inter font-normal text-base',
       'body-3': 'font-inter font-normal text-sm',
       'body-4': 'font-inter font-normal text-xs',
+      'body-5': 'font-inter font-normal text-[0.625rem]',
     },
   },
 }) 
