@@ -105,7 +105,7 @@ export function Footer() {
         </Typography>
       </footer>
 
-      <Circle weight='fill' className='w-40 h-40 text-primary-400 absolute bottom-0 translate-y-1/2 blur-lg right-0 translate-x-1/3' />
+      <Circle weight='fill' className='w-44 h-44 text-primary-400 absolute bottom-0 translate-y-1/2 blur-lg right-0 translate-x-1/3' />
     </div>
   )
 }
