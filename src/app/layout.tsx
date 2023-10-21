@@ -43,7 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${fonts}`}>
+      <body className={`${fonts} flex flex-col items-stretch min-h-screen`}>
         {children}
       </body>
     </html>
