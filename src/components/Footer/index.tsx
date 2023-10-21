@@ -63,6 +63,40 @@ export function Footer() {
               </li>
             </FooterListList>
           </FooterList.Root>
+
+          <div className='w-1 bg-container-700 hidden md:block' />
+
+          <FooterList.Root className='hidden md:flex'>
+            <FooterList.Title>
+              Links
+            </FooterList.Title>
+
+            <FooterListList>
+              <li>
+                <Link href=''>
+                  <Typography as='span' type='body-5' className='underline block underline-offset-1 decoration-tertiary-400'>
+                    Home
+                  </Typography>
+                </Link>
+              </li>
+
+              <li>
+                <Link href='' className='block'>
+                  <Typography as='span' type='body-5' className='underline block underline-offset-1 decoration-tertiary-400'>
+                    Projetos
+                  </Typography>
+                </Link>
+              </li>
+
+              <li>
+                <Link href='' className='block'>
+                  <Typography as='span' type='body-5' className='underline block underline-offset-1 decoration-tertiary-400'>
+                    Eu
+                  </Typography>
+                </Link>
+              </li>
+            </FooterListList>
+          </FooterList.Root>
         </div>
 
 
