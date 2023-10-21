@@ -7,6 +7,11 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { NavItem } from "./NavItem";
 
+const paths = [
+  ['Home', '/'],
+  ['Projetos', '/projects'],
+]
+
 export function NavBar() {
   const [isCollapsed, setIsCollapsed] = useState(true)
 
