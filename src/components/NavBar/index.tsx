@@ -36,8 +36,8 @@ export function NavBar() {
           {navItems}
         </nav>
 
-        <Link href='/' className='absolute left-14 top-1/2 -translate-y-1/2'>
-          <Image src={Logo} alt="Juan Garcia'a logo" className="w-12 h-12 rounded-md" />
+        <Link href='/' className='absolute left-14 top-1/2 -translate-y-1/2 hidden md:block'>
+          <Image src={Logo} alt="Juan Garcia'a logo" className="w-12 h-12 rounded-md" width={150} height={150} />
         </Link>
       </header>
 
