@@ -2,7 +2,6 @@ import { Circle } from '@phosphor-icons/react/dist/ssr/Circle'
 import { GithubLogo } from '@phosphor-icons/react/dist/ssr/GithubLogo'
 import { LinkedinLogo } from '@phosphor-icons/react/dist/ssr/LinkedinLogo'
 import Link from 'next/link'
-import { Typography } from '../Typography'
 import { FooterList } from './FooterList'
 import { FooterListList } from './FooterList/FooterListList'
 
@@ -25,9 +24,9 @@ export function Footer() {
               {
                 contacts.map(contact => (
                   <li key={contact}>
-                    <Typography as='span' type='body-5' className='block'>
+                    <span className='body-5 block'>
                       {contact}
-                    </Typography>
+                    </span>
                   </li>
                 ))
               }
@@ -46,9 +45,9 @@ export function Footer() {
                 <Link href='' className='flex gap-x-1'>
                   <GithubLogo className='w-4 h-4' />
 
-                  <Typography as='span' type='body-5' className='underline underline-offset-1 decoration-tertiary-400'>
+                  <span className='body-5 underline underline-offset-1 decoration-tertiary-400'>
                     @JamDev0
-                  </Typography>
+                  </span>
                 </Link>
               </li>
 
@@ -56,9 +55,9 @@ export function Footer() {
                 <Link href='' className='flex gap-x-1'>
                   <LinkedinLogo className='w-4 h-4' />
 
-                  <Typography as='span' type='body-5' className='underline underline-offset-1 decoration-tertiary-400'>
+                  <span className='body-5 underline underline-offset-1 decoration-tertiary-400'>
                     Juan Garcia
-                  </Typography>
+                  </span>
                 </Link>
               </li>
             </FooterListList>
@@ -74,25 +73,25 @@ export function Footer() {
             <FooterListList>
               <li>
                 <Link href=''>
-                  <Typography as='span' type='body-5' className='underline block underline-offset-1 decoration-tertiary-400'>
+                  <span className='body-5 underline block underline-offset-1 decoration-tertiary-400'>
                     Home
-                  </Typography>
+                  </span>
                 </Link>
               </li>
 
               <li>
                 <Link href='' className='block'>
-                  <Typography as='span' type='body-5' className='underline block underline-offset-1 decoration-tertiary-400'>
+                  <span className='body-5 underline block underline-offset-1 decoration-tertiary-400'>
                     Projetos
-                  </Typography>
+                  </span>
                 </Link>
               </li>
 
               <li>
                 <Link href='' className='block'>
-                  <Typography as='span' type='body-5' className='underline block underline-offset-1 decoration-tertiary-400'>
+                  <span className='body-5 underline block underline-offset-1 decoration-tertiary-400'>
                     Eu
-                  </Typography>
+                  </span>
                 </Link>
               </li>
             </FooterListList>
@@ -100,9 +99,9 @@ export function Footer() {
         </div>
 
 
-        <Typography as='span' type='text-4' className='text-center'>
+        <span className='text-center text-4'>
           Desenvolvido por @JamDev0
-        </Typography>
+        </span>
       </footer>
 
       <Circle weight='fill' className='w-44 h-44 text-primary-400 absolute bottom-0 translate-y-1/2 blur-lg right-0 translate-x-1/3' />
