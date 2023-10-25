@@ -2,6 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .heading-1{
+    @apply font-inter font-semibold text-[2rem];
+  }
+  .heading-2{
+    @apply font-inter font-semibold text-[1.75rem];
+  }
+  .heading-3{
+    @apply font-inter font-semibold text-2xl;
+  }
+  .heading-4{
+    @apply font-inter font-semibold text-xl;
+  }
+  .heading-5{
+    @apply font-inter font-semibold text-base;
+  }
+
+  .highlight-1{
+    @apply font-rubik text-[1.75rem]  ;
+  }
+  .highlight-3{
+    @apply font-rubik text-xl  ;
+  }
+  .highlight-4{
+    @apply font-rubik text-lg  ;
+  }
+
+  .tech-1{
+    @apply font-chakra text-xl;
+  }
+  .tech-3{
+    @apply font-chakra text-sm;
+  }
+  .tech-4{
+    @apply font-chakra text-xs;
+  }
+  .tech-5{
+    @apply font-chakra text-[0.625rem];
+  }
+
+  .tech-heading-4{
+    @apply font-chakra text-2xl;
+  }
+  
+  .text-1{
+    @apply font-crimson font-normal text-lg;
+  }
+  .text-2{
+    @apply font-crimson font-normal text-base;
+  }
+  .text-3{
+    @apply font-crimson font-normal text-sm;
+  }
+  .text-4{
+    @apply font-crimson font-normal text-xs;
+  }
+  .text-5{
+    @apply font-crimson font-normal text-[0.625rem];
+  }
+
+  .body-2{
+    @apply font-inter font-normal text-base;
+  }
+  .body-3{
+    @apply font-inter font-normal text-sm;
+  }
+  .body-4{
+    @apply font-inter font-normal text-xs;
+  }
+  .body-5{
+    @apply font-inter font-normal text-[0.625rem];
+  }
+}
+
 body {
   color: #E7ECF1;
   background: #0D0F10;
