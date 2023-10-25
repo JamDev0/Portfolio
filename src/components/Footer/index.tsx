@@ -99,7 +99,7 @@ export function Footer() {
         </div>
 
 
-        <span className='text-center text-4'>
+        <span className='text-center text-4 md:text-2'>
           Desenvolvido por @JamDev0
         </span>
       </footer>
