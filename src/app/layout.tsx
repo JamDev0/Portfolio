@@ -1,3 +1,4 @@
+import { Footer } from '@/components/Footer'
 import { NavBar } from '@/components/NavBar'
 import type { Metadata } from 'next'
 import { Chakra_Petch, Crimson_Text, Inter, Rubik_Mono_One } from 'next/font/google'
@@ -47,6 +48,7 @@ export default function RootLayout({
       <body className={`${fonts} flex flex-col items-stretch min-h-screen`}>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   )
