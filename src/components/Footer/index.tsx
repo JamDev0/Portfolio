@@ -24,7 +24,7 @@ export function Footer() {
               {
                 contacts.map(contact => (
                   <li key={contact}>
-                    <span className='body-5 block'>
+                    <span className='block'>
                       {contact}
                     </span>
                   </li>
@@ -45,7 +45,7 @@ export function Footer() {
                 <Link href='' className='flex gap-x-1'>
                   <GithubLogo className='w-4 h-4' />
 
-                  <span className='body-5 underline underline-offset-1 decoration-tertiary-400'>
+                  <span className='underline underline-offset-1 decoration-tertiary-400'>
                     @JamDev0
                   </span>
                 </Link>
@@ -55,7 +55,7 @@ export function Footer() {
                 <Link href='' className='flex gap-x-1'>
                   <LinkedinLogo className='w-4 h-4' />
 
-                  <span className='body-5 underline underline-offset-1 decoration-tertiary-400'>
+                  <span className='underline underline-offset-1 decoration-tertiary-400'>
                     Juan Garcia
                   </span>
                 </Link>
@@ -73,7 +73,7 @@ export function Footer() {
             <FooterListList>
               <li>
                 <Link href=''>
-                  <span className='body-5 underline block underline-offset-1 decoration-tertiary-400'>
+                  <span className='underline block underline-offset-1 decoration-tertiary-400'>
                     Home
                   </span>
                 </Link>
@@ -81,7 +81,7 @@ export function Footer() {
 
               <li>
                 <Link href='' className='block'>
-                  <span className='body-5 underline block underline-offset-1 decoration-tertiary-400'>
+                  <span className='underline block underline-offset-1 decoration-tertiary-400'>
                     Projetos
                   </span>
                 </Link>
@@ -89,7 +89,7 @@ export function Footer() {
 
               <li>
                 <Link href='' className='block'>
-                  <span className='body-5 underline block underline-offset-1 decoration-tertiary-400'>
+                  <span className='underline block underline-offset-1 decoration-tertiary-400'>
                     Eu
                   </span>
                 </Link>
