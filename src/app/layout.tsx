@@ -44,10 +44,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${fonts} flex flex-col items-stretch min-h-screen`}>
+    <html lang="en" className={fonts}>
+      <body className='flex flex-col items-stretch min-h-screen'>
         <NavBar />
-        {children}
+          {children}
         <Footer />
       </body>
     </html>
