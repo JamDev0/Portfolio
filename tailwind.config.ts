@@ -72,6 +72,13 @@ const config: Config = {
         'crimson': 'var(--font-crimson-text)',
         'rubik': 'var(--font-rubik-mono-one)',
         'chakra': 'var(--font-chakra-petch)',
+      },
+
+      keyframes: {
+        'stack-switch': {
+          '0%, 40%': { 'transform': 'translateY(0)' },
+          '60%, 100%': { 'transform': 'translateY(-100%)' }
+        }
       }
     },
   },
