@@ -26,7 +26,7 @@ export function NavBar() {
   ))
 
   return (
-    <div className="sticky top-0">
+    <div className="sticky top-0 z-10">
       <header className="flex justify-center bg-container-900 px-8 py-3 z-10 relative">
         <button onClick={onCollapseButtonClick} className="md:hidden">
           <CaretDown data-collapsed={isCollapsed} className="w-10 h-10 transition-transform duration-300 data-[collapsed=false]:rotate-180 " />
