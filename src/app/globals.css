@@ -20,13 +20,13 @@
   }
 
   .highlight-1{
-    @apply font-rubik text-[1.75rem]  ;
+    @apply font-rubik text-[1.75rem];
   }
   .highlight-3{
-    @apply font-rubik text-xl  ;
+    @apply font-rubik text-xl;
   }
   .highlight-4{
-    @apply font-rubik text-lg  ;
+    @apply font-rubik text-lg;
   }
 
   .tech-1{
@@ -60,6 +60,10 @@
   }
   .text-5{
     @apply font-crimson font-normal text-[0.625rem];
+  }
+
+  .body-1 {
+    @apply font-inter font-normal text-lg;
   }
 
   .body-2{
