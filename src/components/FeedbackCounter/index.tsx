@@ -47,11 +47,11 @@ export function FeedbackCounter() {
 
   return (
     <div className="relative flex flex-col items-center px-2 gap-y-2">
-      <div className='absolute left-0 -translate-x-full top-1/2 -translate-y-1/2 h-full aspect-[741/172] opacity-80'>
+      <div className='absolute left-0 -translate-x-full top-1/2 -translate-y-1/2 h-full aspect-[741/172] opacity-50'>
         <Image alt="" src={PointersPng} className=" w-full h-full" />
       </div>
 
-      <div className='absolute right-0 translate-x-full top-1/2 -translate-y-1/2 h-full aspect-[741/172] scale-x-[-1]'>
+      <div className='absolute right-0 translate-x-full top-1/2 -translate-y-1/2 h-full aspect-[741/172] scale-x-[-1] opacity-50'>
         <Image alt="" src={PointersPng} className=" w-full h-full" />
       </div>
 
