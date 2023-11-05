@@ -96,7 +96,9 @@ const config: Config = {
 
       animation: () => ({
         'counter-increase': 'counter-increase 800ms cubic-bezier(.8, 0, 0.56, 1)',
+        'counter-increase-slow': 'counter-increase 2000ms cubic-bezier(.8, 0, 0.56, 1)',
         'counter-decrease': 'counter-decrease 800ms cubic-bezier(.8, 0, 0.56, 1)',
+        'counter-decrease-slow': 'counter-decrease 2000ms cubic-bezier(.8, 0, 0.56, 1)',
       })
     },
   },
