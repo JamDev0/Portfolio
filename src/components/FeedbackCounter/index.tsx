@@ -11,6 +11,8 @@ export function FeedbackCounter() {
   const [animateDecrease, setAnimateDecrease] = useState(false)
 
   const [counter, setCounter] = useState(0)
+  
+  const [animateIncreaseBack, setAnimateIncreaseBack] = useState(false)
 
   const counterAbsolute = useMemo(() => Math.abs(counter), [counter])
 
@@ -55,21 +57,34 @@ export function FeedbackCounter() {
         <Image alt="" src={PointersPng} className=" w-full h-full" />
       </div>
 
+      <div className='relative'>
+        <button 
+          disabled={animateIncrease || animateDecrease} 
+          data-animate={animateIncrease} 
+          className="relative z-10 data-[animate=true]:animate-counter-increase transition-transform" 
+          onAnimationEnd={() => setAnimateIncrease(false)} 
+          onClick={increase}
+        >
+          <HandPointing 
+            className="w-10 h-10 transition-colors" 
+            style={{ 
+              color: (isZero || !isPositive) ? 'rgb(12, 233, 12, 0.45)' : highlightColor 
+            }} 
+          />
+        </button>
 
-      <button 
-        disabled={animateIncrease || animateDecrease} 
-        data-animate={animateIncrease} 
-        className="relative data-[animate=true]:animate-counter-increase transition-transform" 
-        onAnimationEnd={() => setAnimateIncrease(false)} 
-        onClick={increase}
-      >
-        <HandPointing 
-          className="w-10 h-10 transition-colors" 
-          style={{ 
-            color: (isZero || !isPositive) ? 'rgb(12, 233, 12, 0.45)' : highlightColor 
-          }} 
-        />
-      </button>
+        <div 
+          className='top-0 absolute hidden data-[animate=true]:block data-[animate=true]:animate-counter-increase-slow'
+          data-animate={animateIncreaseBack} 
+          onAnimationEnd={() => setAnimateIncreaseBack(false)} 
+        >
+          <span className='py-1 px-2 text-sm w-[9.5rem] text-background absolute -top-1 font-semibold -translate-y-full bg-tertiary-400/90 text-center left-1/2 rounded -translate-x-1/2' >São Paulo - SP</span>
+
+          <HandPointing 
+            className="w-10 h-10 text-tertiary-400/30"
+          />
+        </div>
+      </div>
 
       <div 
         style={{ 
@@ -89,18 +104,36 @@ export function FeedbackCounter() {
         </span>
       </div>
 
-      <button 
-        disabled={animateIncrease || animateDecrease} 
-        data-animate={animateDecrease} 
-        className="relative data-[animate=true]:animate-counter-decrease" 
-        onAnimationEnd={() => setAnimateDecrease(false)} 
-        onClick={decrease}
-      >
-        <HandPointing 
-          className="w-10 h-10 rotate-180 transition-colors" 
-          style={{ color: (isZero || isPositive) ? 'rgb(233, 71, 12, 0.45)' : highlightColor }} 
-        />
-      </button>
+
+      <div className='relative'>
+        <button 
+          disabled={animateIncrease || animateDecrease} 
+          data-animate={animateDecrease} 
+          className="relative data-[animate=true]:animate-counter-decrease" 
+          onAnimationEnd={() => setAnimateDecrease(false)} 
+          onClick={decrease}
+        >
+          <HandPointing 
+            className="w-10 h-10 rotate-180 transition-colors" 
+            style={{ color: (isZero || isPositive) ? 'rgb(233, 71, 12, 0.45)' : highlightColor }} 
+          />
+        </button>
+
+        <div 
+          className='top-0 absolute hidden data-[animate=true]:block data-[animate=true]:animate-counter-decrease-slow'
+          data-animate={animateIncreaseBack} 
+          onAnimationEnd={() => setAnimateIncreaseBack(false)} 
+        >
+          <HandPointing 
+            className="w-10 h-10 rotate-180 text-secondary-400/30"
+          />
+
+          <span className='py-1 px-2 text-sm w-[9.5rem] text-background absolute -bottom-1 font-semibold translate-y-full bg-secondary-400/90 text-center left-1/2 rounded -translate-x-1/2' >São Paulo - SP</span>
+        </div>
+      </div>
+
+
+      <button onClick={() => setAnimateIncreaseBack(true)}>Teste</button>
     </div>
   )
 }
