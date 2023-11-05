@@ -27,18 +27,20 @@ export function NavBar() {
 
   return (
     <div className="sticky top-0 z-10">
-      <header className="flex justify-center bg-container-900 px-8 py-3 z-10 relative">
-        <button onClick={onCollapseButtonClick} className="md:hidden">
-          <CaretDown data-collapsed={isCollapsed} className="w-10 h-10 transition-transform duration-300 data-[collapsed=false]:rotate-180 " />
-        </button>
+      <header className="flex justify-center bg-container-900 px-8 py-3 z-10 md:px-32 relative">
+        <div className='max-w-[100rem] relative w-full flex justify-center'>
+          <button onClick={onCollapseButtonClick} className="md:hidden">
+            <CaretDown data-collapsed={isCollapsed} className="w-10 h-10 transition-transform duration-300 data-[collapsed=false]:rotate-180 " />
+          </button>
 
-        <nav className="hidden md:flex">
-          {navItems}
-        </nav>
+          <nav className="hidden md:flex">
+            {navItems}
+          </nav>
 
-        <Link href='/' className='absolute left-14 top-1/2 -translate-y-1/2 hidden md:block'>
-          <Image src={Logo} alt="Juan Garcia'a logo" className="w-12 h-12 rounded-md" width={150} height={150} />
-        </Link>
+          <Link href='/' className='absolute left-0 top-1/2 -translate-y-1/2 hidden md:block'>
+            <Image src={Logo} alt="Juan Garcia'a logo" className="w-12 h-12 rounded-md" width={150} height={150} />
+          </Link>
+        </div>
       </header>
 
       <nav data-collapsed={isCollapsed} className="flex flex-col items-stretch bg-container-800 absolute w-full transition-all duration-[400ms] ease-out data-[collapsed=true]:-translate-y-full md:hidden">
