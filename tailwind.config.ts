@@ -94,6 +94,10 @@ const config: Config = {
         },
       },
 
+      maxWidth: {
+        content: '100rem'
+      },
+
       animation: () => ({
         'counter-increase': 'counter-increase 800ms cubic-bezier(.8, 0, 0.56, 1)',
         'counter-increase-slow': 'counter-increase 2000ms cubic-bezier(.8, 0, 0.56, 1)',
