@@ -104,7 +104,7 @@ export function Footer() {
         </span>
       </footer>
 
-      <Circle weight='fill' className='w-44 h-44 text-primary-400 absolute bottom-0 translate-y-1/2 blur-lg right-0 translate-x-1/3' />
+      <Circle weight='fill' className='h-40 w-40 text-primary-400 absolute bottom-0 translate-y-1/2 blur-lg right-0 translate-x-1/3 md:h-56 md:w-56' />
     </div>
   )
 }
