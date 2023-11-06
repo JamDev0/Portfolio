@@ -1,7 +1,8 @@
 import { Footer } from '@/components/Footer'
 import { NavBar } from '@/components/NavBar'
 import type { Metadata } from 'next'
-import { Chakra_Petch, Crimson_Text, Inter, Rubik_Mono_One } from 'next/font/google'
+import { Chakra_Petch, Crimson_Text, Inter, Rubik_Mono_One, } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
 const inter = Inter({
@@ -31,12 +32,17 @@ const chakraPetch = Chakra_Petch({
   weight: ['500', '400']
 })
 
+const digitalDismay = localFont({
+  src: './Digital Dismay.otf',
+  variable: '--font-digital-dismay',
+})
+
 export const metadata: Metadata = {
   title: 'Juan Garcia',
   description: "Juan Garcia's portfolio",
 }
 
-const fonts = `${inter.variable} ${crimsonText.variable} ${rubikMonoOne.variable} ${chakraPetch.variable}`
+const fonts = `${inter.variable} ${crimsonText.variable} ${rubikMonoOne.variable} ${chakraPetch.variable} ${digitalDismay.variable}`
 
 export default function RootLayout({
   children,
@@ -44,10 +50,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${fonts} flex flex-col items-stretch min-h-screen`}>
+    <html lang="en" className={fonts}>
+      <body className='flex flex-col items-stretch min-h-screen'>
         <NavBar />
-        {children}
+          {children}
         <Footer />
       </body>
     </html>

@@ -72,7 +72,38 @@ const config: Config = {
         'crimson': 'var(--font-crimson-text)',
         'rubik': 'var(--font-rubik-mono-one)',
         'chakra': 'var(--font-chakra-petch)',
-      }
+        'digital-dismay': 'var(--font-digital-dismay)',
+      },
+
+      keyframes: {
+        'stack-switch': {
+          '0%, 40%': { 'transform': 'translateY(0)' },
+          '60%, 100%': { 'transform': 'translateY(-100%)' }
+        },
+
+        'counter-increase': {
+          '0%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-25px)' },
+          '100%': { transform: 'translateY(0px)' },
+        },
+
+        'counter-decrease': {
+          '0%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(25px)' },
+          '100%': { transform: 'translateY(0px)' },
+        },
+      },
+
+      maxWidth: {
+        content: '100rem'
+      },
+
+      animation: () => ({
+        'counter-increase': 'counter-increase 800ms cubic-bezier(.8, 0, 0.56, 1)',
+        'counter-increase-slow': 'counter-increase 2000ms cubic-bezier(.8, 0, 0.56, 1)',
+        'counter-decrease': 'counter-decrease 800ms cubic-bezier(.8, 0, 0.56, 1)',
+        'counter-decrease-slow': 'counter-decrease 2000ms cubic-bezier(.8, 0, 0.56, 1)',
+      })
     },
   },
   plugins: [],

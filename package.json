@@ -9,8 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@phosphor-icons/react": "^2.0.13",
+    "@phosphor-icons/react": "^2.0.14",
     "class-variance-authority": "^0.7.0",
+    "hex-to-rgba": "^2.0.1",
     "next": "13.5.6",
     "react": "^18",
     "react-dom": "^18"
