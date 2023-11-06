@@ -44,7 +44,7 @@ export function ExperienceCard({ title, description, image, period, position, te
   }
 
   return (
-    <section className="flex flex-col items-center">
+    <section className="flex flex-col items-center max-w-[30rem]">
       <h4 className="heading-4 mb-4 md:heading-3">{title}</h4>
 
       <Image alt="Logo JDG" src={image} className="w-[9.375rem] h-[9.375rem] rounded-md mb-2 md:w-[12.5rem] md:h-[12.5rem]" />
